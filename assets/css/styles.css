@@ -82,10 +82,22 @@ body{
     height: 20%;
     margin-top: 4rem;
 }
+.ul__li{
+    margin-top: 2rem;
+}
+
+.ul__dropdown{
+    display: none;
+}
 .aside__tittle{
     display: flex;
     margin-top: 2rem;
     align-items: center;
+    
+}
+
+.aside__svg{
+    width: 5rem;
     
 }
 .tittle__h3{
@@ -119,7 +131,6 @@ body{
     "e f g h"
     "i j k l";
     
-
 }
 
 .main__next{
@@ -199,19 +210,88 @@ body{
     font-size: 2rem;
 }
 
+.ul__li:hover{
+    color: aqua;
+}
+
+@media (max-width: 800px){
+    html{
+        font-size: 8px;
+    }
+}
 
 
+@media (max-width: 576px){
 
+    .layout{
+        height: 100vh;
+        display: grid;
+        grid-template-areas: 
+        "menu menu menu"
+        "header header header"
+        "main main main"
+        "footer footer footer";
+        
+        grid-template-rows: 8rem 10rem 1fr 15rem;
+        
+    }
+    .main__next{
+        position: absolute;
+        bottom:2%;
+        right: 38%;
+        display: none;
+     
+    }
+    .layout__main{
+        grid-area: main;
+        overflow-y: scroll;
+        height: 100%;
+    }
+    .main__cards{
+        display: grid;
+        grid-template-areas: 
+        "a b"
+        "c d"
+        "e f"
+        "g h"
+        "i j";
+        
+    }
+    .layout__aside{
+        grid-area: menu;
+        background-color: rgb(19, 38, 100);
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
 
+    }
+    .aside__ul{
+        z-index: 1;
+        margin-right: 5rem;
+        margin-bottom: 5rem;
+        
+        
+    }
+    .aside__tittle{
+        display: flex;
+        margin-top: 2rem;
+        align-items: center;
+        margin-left: 5rem;
+        
+    }
+    .aside__svg{
+        width: 4rem;
+    }
 
+    .ul__dropdown{
+        display: block;
+        font-size: 2.5rem;
+    }
+        
 
+    .ul__li{
+       display: none;
+    }
 
-
-
-
-
-
-.aside__svg{
-    width: 5rem;
-    
 }
