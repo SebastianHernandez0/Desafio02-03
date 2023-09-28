@@ -92,9 +92,6 @@ body{
     margin-top: 2rem;
 }
 
-.ul__dropdown{
-    display: none;
-}
 .aside__tittle{
     display: flex;
     margin-top: 2rem;
@@ -131,11 +128,9 @@ body{
 }
 
 .main__cards{
-    display: grid;
-    grid-template-areas: 
-    "a b c d"
-    "e f g h"
-    "i j k l";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     
 }
 
@@ -165,7 +160,14 @@ body{
     justify-content: center;
     align-items: center;
     
+    
+    
 }
+
+.card__figure{
+    width: 35rem;
+}
+
 
 .card__button{
     padding: 0.5rem;
@@ -174,30 +176,6 @@ body{
     background-color: rgb(27, 4, 156);
     border-radius: 0.5rem;
     
-}
-.cards__card--a{
-    grid-area: a;
-}
-.cards__card--b{
-    grid-area: b;
-}
-.cards__card--c{
-    grid-area: c;
-}
-.cards__card--d{
-    grid-area: d;
-}
-.cards__card--e{
-    grid-area: e;
-}
-.cards__card--f{
-    grid-area: f;
-}
-.cards__card--g{
-    grid-area: g;
-}
-.cards__card--h{
-    grid-area: h;
 }
 
 .layout__footer{
@@ -254,13 +232,7 @@ body{
         height: 100%;
     }
     .main__cards{
-        display: grid;
-        grid-template-areas: 
-        "a b"
-        "c d"
-        "e f"
-        "g h"
-        "i j";
+        
         
     }
     .layout__aside{
